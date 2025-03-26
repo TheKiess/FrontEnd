@@ -1,0 +1,77 @@
+:root {
+    --cor-primaria: rgba(182, 139, 20, 0.418);
+    --cor-secundaria: rgba(250, 235, 215, 0.521);
+    --cor-terciaria: ;
+    --cor-hover: ;
+    --fonte-primaria: black;
+    --fonte-secundaria: gray;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+html{
+    background-color: var(--cor-primaria);
+}
+div#container{
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vw 1fr 1fr;
+    grid-template-areas:
+    "cabecalho"
+    "conteudo"
+    "rodape";
+}
+#cabecalho{
+    text-align: center;
+    align-content: center;
+    grid-area: cabecalho;
+    position: fixed;
+}
+.parte_cima{
+    display: inline;
+    text-align: center;
+}
+#introducao{
+    background-color: var(--cor-secundaria);
+    text-align: center;
+    margin: 0 15% 0 15%;
+    align-content: center;
+    grid-area: conteudo;
+    border: solid;
+    border-radius: 60px 60px 10px 10px;
+}
+#introducao h2{
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 20px 0 25px 0;
+}
+#introducao p{
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+a{
+    text-decoration: none;
+    color: var(--fonte-primaria);
+    font-size: 30px;
+    padding: 0 3vw 0 3vw;
+}
+a:hover{
+    color: red;
+    transition: 1s;
+}
+img{
+    height: auto;
+}
+#coffeshop{
+    width: 60%;
+    margin-bottom: 20px;
+    border-radius: 60px 20px 60px 20px;
+}
+#rodape{
+    grid-area: rodape;
+}
