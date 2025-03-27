@@ -115,11 +115,11 @@ a.linkgithub{
     cursor: pointer;
     border: solid 1px;
 }
-#curriculo label{
+#curriculo label, #implementar label{
     font-size: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-#curriculo input{
+#curriculo input, #implementar input{
     border: solid 1px;
     background-color: #dbffffc4;
     font-size: 20px;
@@ -127,4 +127,33 @@ a.linkgithub{
 }
 #intN{
     width: 60px;
+}
+table {
+    margin: auto;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    text-align: center;
+}
+th{
+    text-align: center; 
+    vertical-align: middle;
+    font-size: 30px;
+    padding: 0 30px 0 30px;
+}
+td{
+    text-align: center;
+    padding: 0 30px 0 30px;
+    vertical-align: middle;
+    font-size: 20px;
+    text-decoration:overline;
+}
+#svButton{
+    border: solid 2px;
+    border-radius: 3px;
+    padding: 1px;
+    transition: 1s;
+    cursor: pointer;
+}
+#svButton:hover{
+    background-color: rgba(0, 0, 0, 0.377);
 }

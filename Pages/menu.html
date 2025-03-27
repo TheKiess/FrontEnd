@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestAPIrest</title>
+    <link rel="shortcut icon" type="image/png" href="">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div id="container">
+        <header id="cabecalho">
+            <ul>
+                <li class="parte_cima"><a href="/Pages/first.html" class="sites">Inicio</a></li>
+                <li class="parte_cima"><a href="/Pages/reserva.html" class="sites">Reserve</a></li>
+                <li class="parte_cima"><a href="/Pages/job.html" class="sites">Trabalhe conosco</a></li>
+            </ul>
+        </header>
+        <main>
+            <section id="introducao">
+                <h2>Aqui temos um sistema básico sobre implementação.</h2>
+                <div id="implementar">
+                    <form action="GET">
+                        <label for="productName">Nome do Produto: </label>
+                        <input type="text" id="productName" name="productName" placeholder="Nome do produto" required>
+                        <label for="txtDesc">Descrição: </label>
+                        <input type="text" id="txtDesc" name="txtDesc" placeholder="Descrição" required>
+                        <label for="intPreco">Preço do produto: </label>
+                        <input type="number" name="intPreco" id="intPreco" placeholder="Preço do produto" required>
+                        <button id="svButton">Salvar</button>
+                    </form>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Descrição</th>
+                            <th>Preço</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+        <footer id="rodape">
+            <address class="info">
+                <a href="https://github.com/TheKiess" class="linkgithub">
+                    Frank Kiess
+                    <img align="right" id="github" src="/Images/github-mark.png" width="30"/>
+                </a>
+            </address>
+        </footer>
+    </div>
+    <script src="/Backend/script.js"></script>
+    <script src="/Backend/crud.js"></script>
+</body>
+</html>
