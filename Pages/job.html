@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestAPIrest</title>
+    <link rel="shortcut icon" type="image/png" href="">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div id="container">
+        <header id="cabecalho">
+            <li class="parte_cima"><a href="/Pages/first.html" class="sites">Inicio</a></li>
+            <li class="parte_cima"><a href="#" class="sites">Menu</a></li>
+            <li class="parte_cima"><a href="#" class="sites">Reserve</a></li>
+            <li class="parte_cima"><a href="/Pages/job.html" class="sites">Trabalhe conosco</a></li>
+        </header>
+        <main>
+            <section id="introducao">
+                <h2>Deseja trabalhar conosco?<br>Envie seu curriculo!!</h2>
+                <form action="" method="GET" id="curriculo">
+                    <label for="name">Nome Completo: </label>
+                    <input type="text" id="name" name="name" placeholder="Seu nome." required>
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email"><br>
+                    <label for="bdate">Data de Nascimento: </label>
+                    <input type="date" name="bdate" id="bdate"><br><br>
+                    <label for="txtCep">CEP:</label>
+                    <input type="text" id="txtCep" name="txtCep" placeholder="Digite seu CEP" required>
+                    <button id="search" align="center"><span title="Procurar"><img id="searchimg" src="/Images/lupa.jpg" width="20"/></span></button>
+                    <label for="txtCidade">Cidade: </label>
+                    <input type="text" id="txtCidade" name="txtCidade" placeholder="Sua Cidade" required><br>
+                    <label for="txtBairro">Bairro: </label>
+                    <input type="text" id="txtBairro" name="txtBairro" placeholder="Seu Bairro" required>
+                    <label for="txtRua">Rua: </label>
+                    <input type="text" id="txtRua" name="txtRua" placeholder="Sua Rua" required><br>
+                    <label for="intN">Nº: </label>
+                    <input type="number" id="intN" name="intN" placeholder="Nº" required><br><br>
+                    <label for="subarquive">Envie nos seu currículo: </label>
+                    <input type="file" id="subarquive" name="subarquive"><br><br>
+                    <label for="buttonsubmit"></label>
+                    <span title="Enviar formulário."><input type="submit" id="buttonsubmit" name="buttonsubmit"></span>
+                </form>
+            </section>
+        </main>
+        <footer id="rodape">
+            <address class="info">
+                <a href="https://github.com/TheKiess" class="linkgithub">
+                    Frank Kiess
+                    <img align="right" id="github" src="/Images/github-mark.png" width="30"/>
+                </a>
+            </address>
+        </footer>
+    </div>
+    <script src="/Backend/script.js"></script>
+    <script src="/Backend/cep.js"></script>
+</body>
+</html>

@@ -20,28 +20,34 @@ div#container{
     display: grid;
     min-height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 10vw 1fr 1fr;
+    grid-template-rows: 5vw 1fr 1fr;
     grid-template-areas:
     "cabecalho"
     "conteudo"
     "rodape";
 }
 #cabecalho{
-    text-align: center;
+    position: fixed;
     align-content: center;
     grid-area: cabecalho;
-    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.664);
+    width: 100%;
 }
 .parte_cima{
+    list-style: none;
     display: inline;
-    text-align: center;
+}
+main{
+    grid-area:conteudo;
 }
 #introducao{
     background-color: var(--cor-secundaria);
     text-align: center;
     margin: 0 15% 0 15%;
     align-content: center;
-    grid-area: conteudo;
     border: solid;
     border-radius: 60px 60px 10px 10px;
 }
@@ -54,13 +60,15 @@ div#container{
     font-size: 30px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-a{
+a.sites{
     text-decoration: none;
     color: var(--fonte-primaria);
     font-size: 30px;
     padding: 0 3vw 0 3vw;
+    transition: 1s;
+    color: black;
 }
-a:hover{
+a.sites:hover{
     color: red;
     transition: 1s;
 }
@@ -74,4 +82,49 @@ img{
 }
 #rodape{
     grid-area: rodape;
+    margin-top: 1vh;
+    text-align: center;
+}
+.info{
+    display:inline-flex;
+    background-color: #03e9c3da;
+    border: solid 2px;
+    border-radius: 10px;
+    transition: 3s;
+}
+#github{
+    margin-left: 10px;
+}
+a.linkgithub{
+    text-decoration: none;
+    color: var(--fonte-primaria);
+    font-size: 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+@keyframes cores{
+    0% {background-color: #03e9c3da;}
+    25%{background-color: #00bd9d;}
+    50%{background-color: #00836d;}
+    75%{background-color: #00bd9d;}
+    100%{background-color: #03e9c3da;}
+}
+.info:hover{
+    animation: cores 1.5s linear infinite;
+}
+#searchimg, #buttonsubmit, #subarquive{
+    cursor: pointer;
+    border: solid 1px;
+}
+#curriculo label{
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#curriculo input{
+    border: solid 1px;
+    background-color: #dbffffc4;
+    font-size: 20px;
+    margin: 12px;
+}
+#intN{
+    width: 60px;
 }
