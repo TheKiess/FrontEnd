@@ -12,7 +12,7 @@
         <header id="cabecalho">
             <ul>
                 <li class="parte_cima"><a href="/Pages/first.html" class="sites">Inicio</a></li>
-                <li class="parte_cima"><a href="/Pages/reserva.html" class="sites">Reserve</a></li>
+                <li class="parte_cima"><a href="/Pages/menu.html" class="sites">Menu</a></li>
                 <li class="parte_cima"><a href="/Pages/job.html" class="sites">Trabalhe conosco</a></li>
             </ul>
         </header>
@@ -22,20 +22,26 @@
                 <div id="implementar">
                     <form action="GET">
                         <label for="productName">Nome do Produto: </label>
-                        <input type="text" id="productName" name="productName" placeholder="Nome do produto" required>
-                        <label for="txtDesc">Descrição: </label>
-                        <input type="text" id="txtDesc" name="txtDesc" placeholder="Descrição" required>
+                        <input type="text" id="productName" name="productName" placeholder="Nome do produto"><br><br>
+                        <label for="imgCard">A imagem do alimento:</label>
+                        <input type="file" id="imgCard" name="imgCard" accept="image/*"><br><br>
+                        <label for="txtDesc">Descrição: </label><br>
+                        <textarea id="txtDesc" name="txtDesc" placeholder="Descrição" rows="5" cols="30"></textarea><br><br>
                         <label for="intPreco">Preço do produto: </label>
-                        <input type="number" name="intPreco" id="intPreco" placeholder="Preço do produto" required>
+                        <input type="number" name="intPreco" id="intPreco" placeholder="Preço do produto">
                         <button id="svButton">Salvar</button>
+                        <button id="resetButton">Resetar</button>
                     </form>
                 </div>
                 <table>
                     <thead>
                         <tr>
+                            <th>Imagem</th>
                             <th>Nome</th>
                             <th>Descrição</th>
                             <th>Preço</th>
+                            <th>Editar</th>
+                            <th>Deletar</th>
                         </tr>
                     </thead>
                     <tbody>
