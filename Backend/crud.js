@@ -63,6 +63,7 @@ svButton.addEventListener('click', (e) => {
         alert('Preencha todos os campos!');
     }
 });
+loadItens();
 
 tbody.addEventListener('click', (e) => {
     const target = e.target.closest('button');
@@ -74,7 +75,50 @@ tbody.addEventListener('click', (e) => {
         itens.splice(index, 1);
         setItensBD();
         loadItens();
+    } else if (target.classList.contains('editButton')) {
+        console.log("Abrindo modal para edição do item:", index);
+        openEditModal(index);
     }
 });
 
-loadItens();
+function openEditModal(index) {
+    const item = itens[index];
+
+    const menuEdit = document.querySelector('#menu-edit');
+    const editProductName = document.querySelector('#editproductName');
+    const editDesc = document.querySelector('#edittxtDesc');
+    const editPreco = document.querySelector('#editintPreco');
+    const editImgCard = document.querySelector('#editimgCard');
+    const saveEditButton = document.querySelector('#menu-edit button');
+
+    editProductName.value = item.nome;
+    editDesc.value = item.descricao;
+    editPreco.value = item.valor;
+    menuEdit.classList.add('show');
+
+    let newImageBase64 = item.imagem;
+    editImgCard.addEventListener('change', function (event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                newImageBase64 = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+    saveEditButton.replaceWith(saveEditButton.cloneNode(true));
+    const newSaveEditButton = document.querySelector('#menu-edit button');
+
+    newSaveEditButton.addEventListener('click', () => {
+        itens[index] = {
+            imagem: newImageBase64,
+            nome: editProductName.value,
+            descricao: editDesc.value,
+            valor: editPreco.value
+        };
+        setItensBD();
+        loadItens();
+        menuEdit.classList.remove('show');
+    });
+}
