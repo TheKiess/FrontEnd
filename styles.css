@@ -13,18 +13,34 @@
     border: 0;
     box-sizing: border-box;
 }
-html{
-    background-color: var(--cor-primaria);
+body, html {
+    height: 100%;
+    width: 100%;
 }
-div#container{
+div#container {
+    position: relative;
     display: grid;
     min-height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 5vw 1fr 1fr;
+    grid-template-rows: 5vw 1fr auto;
     grid-template-areas:
-    "cabecalho"
-    "conteudo"
-    "rodape";
+        "cabecalho"
+        "conteudo"
+        "rodape";
+}
+
+div#container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/Images/Back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(6px);
+    z-index: -1;
 }
 #cabecalho{
     position: fixed;
@@ -70,7 +86,7 @@ a.sites{
     font-size: 30px;
     padding: 0 3vw 0 3vw;
     transition: 1s;
-    color: black;
+    color: rgb(173, 173, 173);
 }
 a.sites:hover{
     color: red;
@@ -86,7 +102,7 @@ img{
 }
 #rodape{
     grid-area: rodape;
-    margin-top: 1vh;
+    margin: 2vh 0 2.5vh 0;
     text-align: center;
 }
 .info{
@@ -152,7 +168,7 @@ td{
     text-decoration:overline;
 }
 
-#svButton, #resetButton{
+#svButton{
     border: solid 2px;
     border-radius: 3px;
     padding: 1px;
@@ -166,7 +182,7 @@ td{
     cursor: pointer;
 }
 
-#svButton:hover, #resetButton:hover{
+#svButton:hover{
     background-color: rgba(0, 0, 0, 0.377);
 }
 
