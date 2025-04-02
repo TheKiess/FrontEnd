@@ -71,13 +71,20 @@ main{
     border: solid;
     border-radius: 60px 60px 10px 10px;
 }
+@keyframes sobeDesce {
+    0% {transform: translateY(0px);}
+    100% {transform: translateY(15px);}
+}
 #introducao h2{
     font-size: 30px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding: 20px 0 25px 0;
-}
+    padding: 20px 0 30px 0;
+        position: relative;
+        animation: sobeDesce 1s infinite alternate ease-in-out;
+    }
 #introducao p{
     font-size: 30px;
+    padding: 1.5vw;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 a.sites{
