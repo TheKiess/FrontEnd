@@ -102,7 +102,7 @@ a.sites:hover{
 img{
     height: auto;
 }
-#coffeshop{
+#introimg{
     width: 60%;
     margin-bottom: 20px;
     border-radius: 60px 20px 60px 20px;
@@ -221,4 +221,20 @@ td{
 
 #menu-edit.show {
     display: block;
+}
+div.experiencias{
+    border: solid;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "exp-cima"
+    "exp-texto";
+}
+.linguagensCabecalho{
+    grid-area: exp-cima;
+}
+.textCabecalho{
+    display: inline;
+    padding: 5px;
 }
