@@ -270,16 +270,23 @@ td{
 }
 
 .linguagemBody {
+    min-height: 250px;
+    text-align: center;
     grid-area: exp-texto;
-    padding: 15px;
+    padding: 22px;
     border: 1px solid #ccc;
-    border-radius: 8px;
-    min-height: 100px;
-    background-color: #ccc;
-}
+    border-radius: 12px;
+    background-color: rgba(204, 204, 204, 0.9); /* cinza levemente translúcido */
+    background-size: 210px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    color: #111;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.7); /* dá contraste ao texto */
 
 .textCabecalho.ativo {
-    background-color: #00000091;
+    background-color: #000000;
     color: white;
     position: relative;
     top: 5px;
