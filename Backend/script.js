@@ -1,3 +1,12 @@
+const links = document.querySelectorAll('#cabecalho li a');
+const currentPath = window.location.pathname.toLowerCase();
+
+links.forEach(link => {
+    const href = link.getAttribute('href').toLowerCase();
+    if (currentPath.includes(href)) {
+        link.parentElement.classList.add('ativo');
+    }
+});
 const linguagemInfo = {
     "C++": "Uma linguagem no qual estou estudando ultimamente para melhoria do meu conhecimento, fora que usarei futuramente na faculdade então já estou me acostumando com a sintaxe e seus comandos e bibliotecas.",
     "Python": "Gostei de usar Python na faculdade, pois é uma linguagem com sintaxe fácil de usar, porém desejo seguir para outras áreas.",
@@ -28,6 +37,6 @@ botoes.forEach(botao => {
             linguagemBody.style.backgroundPosition = "center";
             linguagemBody.style.paddingTop = "120px";
             linguagemBody.style.opacity = "1";
-        }, 300);
+        }, 250);
     });
 });
