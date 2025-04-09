@@ -7,6 +7,7 @@ links.forEach(link => {
         link.parentElement.classList.add('ativo');
     }
 });
+
 const linguagemInfo = {
     "C++": "Uma linguagem no qual estou estudando ultimamente para melhoria do meu conhecimento, fora que usarei futuramente na faculdade então já estou me acostumando com a sintaxe e seus comandos e bibliotecas.",
     "Python": "Gostei de usar Python na faculdade, pois é uma linguagem com sintaxe fácil de usar, porém desejo seguir para outras áreas.",

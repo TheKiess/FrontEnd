@@ -330,3 +330,26 @@ td{
     from {width: 0;}
     to {width: 100%;}
 }
+
+article#oldwork{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "top-edge top-edge"
+    "left-edge right-edge";
+    margin-top: 100px;
+    border: solid;
+}
+div.top-edge{
+    grid-area: top-edge;
+    border: solid;
+}
+div.left-edge{
+    grid-area: left-edge;
+    border: solid;
+}
+div.oldwork-content{
+    grid-area: right-edge;
+    border: solid;
+}
