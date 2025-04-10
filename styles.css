@@ -333,10 +333,10 @@ td{
 
 article#oldwork{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 250px 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
-    "top-edge top-edge"
+    "left-edge top-edge"
     "left-edge right-edge";
     margin-top: 100px;
     border: solid;
@@ -352,4 +352,9 @@ div.left-edge{
 div.oldwork-content{
     grid-area: right-edge;
     border: solid;
+}
+li.funcao{
+    list-style: none;
+    padding: 8px 0 16px;
+    background-color: rgba(204, 204, 204, 0.9);
 }
