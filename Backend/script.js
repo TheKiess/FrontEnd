@@ -41,3 +41,43 @@ botoes.forEach(botao => {
         }, 250);
     });
 });
+
+const experienciainfo = {
+    "Exército Brasileiro": [
+        "Gerenciamento de tarefas e documentação online",
+        "Invenção de banners, placas e quadros murais",
+        "Desenvolvimento de materiais gráficos digitais",
+        "Criação e automação de processos administrativos",
+        "Motorista de viaturas"
+    ],
+    "EVO Automações": [
+        "Montagem dos equipamentos e realização de testes",
+        "Manuseio em dashboard",
+        "Utilização de Excel, programação e uso de suas vertentes"
+    ]
+};
+
+const botoesExp = document.querySelectorAll('.funcao');
+const expBody = document.querySelector('.oldwork-content');
+
+botoesExp.forEach(botao => {
+    botao.addEventListener('click', () => {
+        const empresa = botao.textContent.trim();
+        const detalhes = experienciainfo[empresa];
+
+        botoesExp.forEach(b => b.classList.remove('active'));
+        botao.classList.add('active');
+
+        if (detalhes) {
+            expBody.innerHTML = `
+                <h4>${empresa}</h4>
+                <ul>
+                    ${detalhes.map(item => `<li>${item}</li>`).join('')}
+                </ul>
+            `;
+            expBody.style.animation = 'fadeIn 0.5s ease-in-out'; // Reinicia animação
+        } else {
+            expBody.innerHTML = `<p>Informações não encontradas.</p>`;
+        }
+    });
+});
