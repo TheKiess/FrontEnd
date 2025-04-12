@@ -75,7 +75,7 @@ botoesExp.forEach(botao => {
                     ${detalhes.map(item => `<li>${item}</li>`).join('')}
                 </ul>
             `;
-            expBody.style.animation = 'fadeIn 0.5s ease-in-out'; // Reinicia animação
+            expBody.style.animation = 'fadeIn 0.5s ease-in-out';
         } else {
             expBody.innerHTML = `<p>Informações não encontradas.</p>`;
         }

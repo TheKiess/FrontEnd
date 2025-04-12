@@ -51,6 +51,7 @@ div#container::before {
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.664);
+    color: #ffffff;
     width: 100%;
     z-index: 10;
 }
@@ -101,11 +102,6 @@ a.sites{
     padding: 0 3vw 0 3vw;
     transition: 1s;
     color: rgb(173, 173, 173);
-}
-
-a.sites:hover{
-    color: red;
-    transition: 1s;
 }
 
 img{
@@ -252,10 +248,11 @@ td{
         "exp-cima"
         "exp-texto";
     border: 2px solid #ffc186;
-    border-radius: 10px;
+    border-radius: 8px;
     max-width: 600px;
     margin: auto;
     font-family: sans-serif;
+    border: solid 3px #333;
 }
 
 #linguagensCabecalho {
@@ -265,13 +262,13 @@ td{
     list-style: none;
     margin: 0;
     cursor: pointer;
+    border-bottom: solid 3px #333;
 }
 
 .textCabecalho {
     width: 100%;
     padding: 8px 16px;
     background-color: #ffc186;
-    border-radius: 3px;
     border: 2px solid transparent;
     transition: all 1s ease;
     font-weight: bold;
@@ -290,7 +287,7 @@ td{
     grid-area: exp-texto;
     padding: 22px;
     border: 1px solid #ccc;
-    border-radius: 12px;
+    border-radius: 6.5px;
     background-color: rgba(204, 204, 204, 0.9);
     background-size: 210px;
     background-repeat: no-repeat;
@@ -344,9 +341,12 @@ article#oldwork {
     overflow: hidden;
     background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(4px);
+    max-width: 600px;
+    margin: 60px auto;
+    font-family: sans-serif;
+    background-color: rgba(204, 204, 204, 0.9);
 }
 
-/* Cabeçalho da seção */
 div.top-edge {
     grid-area: top-edge;
     padding: 15px;
@@ -354,29 +354,36 @@ div.top-edge {
     font-weight: bold;
     border-bottom: 2px solid #444;
     text-align: center;
+    background-color: #ffc186;
 }
 
-/* Lista lateral esquerda */
 div.left-edge {
     grid-area: left-edge;
-    padding: 10px;
     background-color: rgba(255, 255, 255, 0.1);
     border-right: 2px solid #444;
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
-
-/* Botões das empresas */
+.left-edge ul {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
 li.funcao {
     list-style: none;
-    background-color: rgba(204, 204, 204, 0.2);
+    background-color: #ffc186;
     cursor: pointer;
     padding: 10px;
-    border-radius: 8px;
+    border-radius: 6px;
     text-align: center;
     transition: all 0.3s ease;
     font-weight: 500;
+    height: 100%;
+    content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
 }
 
 li.funcao:hover {
@@ -385,28 +392,14 @@ li.funcao:hover {
 }
 
 li.funcao.active {
-    background-color: #fff;
-    color: #000;
+    background-color: #000000;
+    color: white;
     font-weight: bold;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Conteúdo clicado */
 div.oldwork-content {
     grid-area: right-edge;
     padding: 20px;
     color: #000;
-    animation: fadeIn 0.4s ease-in-out;
-}
-
-/* Animação suave */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
