@@ -45,19 +45,53 @@ div#container::before {
 
 #cabecalho{
     position: fixed;
-    align-content: center;
-    grid-area: cabecalho;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.664);
+    color: #ffffff;
+    z-index: 10;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.664);
-    color: #ffffff;
-    width: 100%;
-    z-index: 10;
 }
+
+#menu{
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
 .parte_cima{
     list-style: none;
     display: inline;
+    margin-right: 20px;
+}
+
+#usuario {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-weight: bold;
+    font-family: sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+.loginIcon{
+    display: block;
+    transition: all 0.3s ease-in-out;
+}
+
+.loginIcon:hover{
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 6px white);
 }
 
 main{
@@ -76,7 +110,7 @@ main{
     border: solid;
     border-radius: 60px 60px 10px 10px;
 }
-@keyframes sobeDesce {
+@keyframes sobeDesce{
     0% {transform: translateY(0px);}
     100% {transform: translateY(15px);}
 }
