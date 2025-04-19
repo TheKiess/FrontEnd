@@ -529,3 +529,55 @@ button[type="submit"]:hover {
     text-align: center;
     font-size: 14px;
 }
+
+#containerDash{
+    display: grid;
+    grid-template-areas: 
+    "topDash topDash"
+    "leftDash rightDash";
+    grid-template-columns: 15% 85%;
+    grid-template-rows: 10vh 90vh;
+    height: 100vh;
+}
+  
+#topDash{
+    grid-area: topDash;
+    background-color: #1f2937;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+  
+#leftDash{
+    grid-area: leftDash;
+    background-color: #374151;
+    padding: 1rem;
+    color: white;
+}
+  
+#leftDash ul{
+    list-style: none;
+}
+  
+#leftDash ul li{
+    margin: 1rem 0;
+}
+  
+#leftDash ul li a{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+  
+  #leftDash ul li a:hover{
+    text-decoration: underline;
+}
+  
+#rightDash{
+    grid-area: rightDash;
+    padding: 2rem;
+    background-color: #ffffff;
+}
